@@ -5,6 +5,7 @@ import { AiTwotoneDelete } from "react-icons/ai";
 import useUserData from '../../CustomHooks/useUserData';
 import axios from 'axios';
 import ProductTable from './ProductTable';
+import Loder from '../Loder';
 
 
 const MyProducts = () => {
@@ -79,7 +80,7 @@ const MyProducts = () => {
         
      
     {
-                        loading ? (<p>Loading ...</p>) : (
+                        loading ? (<Loder></Loder>) : (
                             <>
                                 {
                                     products.length === 0 ? (<div className='w-full h-full flex items-center justify-center'>

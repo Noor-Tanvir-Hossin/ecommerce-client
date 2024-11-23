@@ -11,9 +11,12 @@ const Navbar = () => {
         <nav className="relative bg-white shadow dark:bg-gray-800">
       <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
         <div className="flex items-center justify-between">
+          <div className='flex gap-3 items-center justify-center'>
+          <img className='h-10 w-10 rounded-full object-cover' src="/public/design-null.png" alt="" />
           <h1 className='text-3xl font-extrabold'>
           ShopVerse
           </h1>
+          </div>
 
           {/* Mobile menu button */}
           <div className="flex lg:hidden">

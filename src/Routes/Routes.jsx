@@ -20,6 +20,7 @@ import AdminRoute from './PrivateRoutes/AdminRoute';
 import AllUsers from '../components/Dashboard/AllUsers';
 import ProductDetails from '../components/Dashboard/ProductDetails';
 import UpdateProducts from '../components/Dashboard/UpdateProducts';
+import UpdateRole from '../components/Dashboard/UpdateRole';
 
 
 const router = createBrowserRouter([
@@ -98,10 +99,17 @@ const router = createBrowserRouter([
          <UpdateProducts></UpdateProducts>
         </SallerRoute>
       },
+      
       {
         path: '/dashboard/allusers',
         element: <AdminRoute>
           <AllUsers></AllUsers>
+        </AdminRoute>
+      },
+      {
+        path: '/dashboard/updateRole/:id',
+        element: <AdminRoute>
+           <UpdateRole></UpdateRole>
         </AdminRoute>
       },
     ]

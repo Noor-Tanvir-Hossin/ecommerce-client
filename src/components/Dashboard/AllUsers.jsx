@@ -3,6 +3,7 @@ import useUserData from '../../CustomHooks/useUserData';
 import { CiEdit } from "react-icons/ci";
 import { AiTwotoneDelete } from "react-icons/ai";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const AllUsers = () => {
     const [users, setUsers] = useState([])
@@ -76,7 +77,9 @@ const AllUsers = () => {
                                                 <td>{user.name}</td>
                                                 <td>{user.email}</td>
                                                 <td>{user.role}</td>
-                                                <td><button className='btn btn-grey'><CiEdit size={20} /></button></td>
+                                                <td><Link to={`/dashboard/updateRole/${user._id}`} >
+                                                <button className='btn btn-grey'><CiEdit size={20} /></button>
+                                                </Link></td>
                                                 <td><button onClick={() => handleDelete(user._id)} className='btn btn-grey'><AiTwotoneDelete size={20} /></button></td>
 
 

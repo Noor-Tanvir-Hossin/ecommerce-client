@@ -54,24 +54,19 @@ const Contact = () => {
         <div className="bg-gray-100 min-h-screen py-10">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-                    {/* Address Section */}
                     <div className="bg-white shadow-lg p-6 text-center rounded-lg">
                         <div className="text-xl font-bold mb-2">Address</div>
-                        <p>PO Box CT16122 Collins Street West,</p>
-                        <p>Victoria 8007, Australia.</p>
+                         <p>Chittagong, Bangladesh.</p>
                     </div>
-                    {/* Phone Section */}
                     <div className="bg-white shadow-lg p-6 text-center rounded-lg">
                         <div className="text-xl font-bold mb-2">Phone</div>
-                        <p>(888) 123 456 789</p>
-                        <p>(888) 589 658 23</p>
+                        <p>0184564654899</p>
+                        <p>018265479215</p>
                     </div>
-                    {/* Email Section */}
                     <div className="bg-white shadow-lg p-6 text-center rounded-lg">
                         <div className="text-xl font-bold mb-2">Email</div>
                         <p>{data.email}</p>
                     </div>
-                    {/* Follow Us Section */}
                     <div className="bg-white shadow-lg p-6 text-center rounded-lg">
                         <div className="text-xl font-bold mb-2">Follow Us</div>
                         <div className="flex justify-center space-x-4">
@@ -83,7 +78,6 @@ const Contact = () => {
                     </div>
                 </div>
 
-                {/* Leave Us a Message Section */}
                 <div className="bg-white shadow-lg p-8 rounded-lg">
                     <h2 className="text-2xl font-bold text-center mb-6">Leave us a Message</h2>
                     <p className="text-gray-600 text-center mb-8">
@@ -119,10 +113,7 @@ const Contact = () => {
                         </div>
                             
                         </div>
-                        {/* <div className="mb-4">
-                            <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Subject</label>
-                            <input type="text" id="subject" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Subject" />
-                        </div> */}
+                       
                         
                         <div className="text-center">
                             <button type="submit" className="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600">Send</button>
