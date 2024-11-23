@@ -11,13 +11,13 @@ const MyProducts = () => {
 
     const [products, setProducts] = useState([])
     const [loading, setLoding] = useState(false)
-    // const [latestWhish, setLatestWhish] = useState(true)
-    // const [nWhishList, setInWhishList] = useState(true)
     const userData = useUserData()
     const sallerEmail= userData.email
-    // console.log(userData.email);
+    const [users, setUsers] = useState([])
+    const [latestproducts, setLatestProducts] = useState(true)
+    // const [loading, setLoding] = useState(false)
+    // const userData = useUserData()
     const token = localStorage.getItem("access-token")
-    // console.log(nWhishList);
     
     useEffect(() => {
         const fetchProduts = async () => {
@@ -33,8 +33,31 @@ const MyProducts = () => {
         if (userData._id && token) {
             fetchProduts()
         }
-    }, [sallerEmail])
+    }, [sallerEmail , latestproducts])
     // console.log(product);
+
+    const handleDelete = (id) => {
+        const productId = id; // Replace with the actual product ID
+
+        // Send the DELETE request to the server
+        axios.delete(`http://localhost:5000/deleteProduct/${productId}`)
+            .then(response => {
+                console.log(response.data.message); // Handle the success message (e.g., "Product deleted successfully")
+                setLatestProducts((prev)=> !prev)
+            })
+            .catch(error => {
+                if (error.response) {
+                    console.error('Error response:', error.response.data.message); // Handle specific error message
+                } else {
+                    console.error('Error:', error.message); // Handle other errors
+                }
+            });
+    }
+
+
+
+
+
 
 
     return (
@@ -63,7 +86,7 @@ const MyProducts = () => {
                                         <h1 className='text-3xl font-bold'>No product Found</h1>
                                     </div>) : <>
                                     {
-                                            products.map((product) => (<ProductTable key={product._id} product={product} />))
+                                            products.map((product) => (<ProductTable key={product._id} product={product} handleDelete={handleDelete} />))
                                         }
                                     </>
                                 }

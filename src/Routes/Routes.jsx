@@ -19,6 +19,7 @@ import AddProducts from '../components/Dashboard/AddProducts';
 import AdminRoute from './PrivateRoutes/AdminRoute';
 import AllUsers from '../components/Dashboard/AllUsers';
 import ProductDetails from '../components/Dashboard/ProductDetails';
+import UpdateProducts from '../components/Dashboard/UpdateProducts';
 
 
 const router = createBrowserRouter([
@@ -89,6 +90,12 @@ const router = createBrowserRouter([
         path: '/dashboard/add-products',
         element: <SallerRoute>
           <AddProducts></AddProducts>
+        </SallerRoute>
+      },
+      {
+        path: '/dashboard/updateProduct/:id',
+        element: <SallerRoute>
+         <UpdateProducts></UpdateProducts>
         </SallerRoute>
       },
       {

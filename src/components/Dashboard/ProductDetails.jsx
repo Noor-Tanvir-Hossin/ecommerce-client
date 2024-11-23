@@ -15,7 +15,7 @@ const ProductDetails = () => {
     
 
     useEffect(() => {
-        const fetchUserData = async () => {
+        const fetchProductData = async () => {
             setLoding(true)
             await axios.get(`http://localhost:5000/products/${id}`)
 
@@ -27,7 +27,7 @@ const ProductDetails = () => {
 
 
         };
-        fetchUserData()
+        fetchProductData()
         // if (user?.email && !loading) {
 
         // };
